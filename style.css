@@ -1,0 +1,366 @@
+body{
+    background-image: linear-gradient(to bottom, #eeeeee, #ffffff);
+    color: #000000;
+    font-weight: bold;
+    font-family: Helvetica, Arial;
+}
+
+header{
+    padding-top: 1px;
+    padding-bottom: 0px;
+    background-color: #d3d3d3;
+    color: darkblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 120%;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: darkblue;
+}
+
+h1{
+    font-size: 200%;
+    margin-left: 8em;
+    background-image: url(glasses.png);
+    line-height: 200%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+nav{
+    font-weight: bold;
+    padding: 20px, 5px, 0px, 20px;
+    float: right;
+    width: 170px;
+    font-size: 120%;
+    text-align: center;
+}
+
+h2{
+    color: darkblue;
+    padding-top: 2px;
+}
+
+footer{
+    font-size: .9em;
+    font-style: italic;
+    text-align: center;
+    padding: 1em;
+    background-color: #d3d3d3;
+    margin-right: 170px;
+    color: darkblue;
+    font-weight: bold;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: darkblue;
+    padding-top: 30px;
+
+}
+
+footer a{
+    text-decoration: none;
+}
+
+.wrapper {
+    background-color: #d3d3d3;
+    min-width: 700px;
+    max-width: 1024px;
+    box-shadow: 0px 3px 3px rgba(66,66,66,0.3);
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: darkblue;
+}
+
+main{
+    padding-left: 2em;
+    padding-right: 2em;
+    display: block;
+    background-color: #ffffff;
+    margin-right: 170px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-right-color: darkblue;
+}
+
+nav{
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+nav a:link { 
+    color:darkblue;
+    text-decoration: none;
+}
+
+nav a:visited{
+    color: darkblue;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+}
+
+nav a:hover, .signupbutton:hover, .loginbutton:hover{
+    color: red;
+    text-decoration: none;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 8px;
+}
+
+nav ul li{
+    margin-top: 6px;
+}
+
+header,nav,main,footer{
+    display: block;
+}
+
+.liberalbutton, .conservativebutton, .independentbutton {
+    color:black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    width: 7em;
+    text-shadow: .5px .5px white;
+}
+
+.liberalbutton{
+    background-color:#0015BC;
+    font-weight: bold;
+}
+
+.conservativebutton {
+    background-color: #FF0000;
+    font-weight: bold;
+
+}
+
+.independentbutton {
+    background-color: ivory;
+    font-weight: bold;
+
+}
+
+.liberalbutton:hover, .independentbutton:hover, .conservativebutton:hover {
+    background-color: lightgray;
+    color:darkblue;
+}
+
+.loginbutton,.signupbutton {
+    color: darkblue;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #d3d3d3;
+    margin-top: 5px;
+    padding-bottom: 1.15em;
+}
+
+.signupbutton{
+    padding-bottom: 0;
+}
+
+.readings{
+    display: none;
+}
+
+h1 a:link{
+    color:darkblue;
+    text-decoration: none;
+}
+
+
+h1 a:visited{
+    color: darkblue;
+    text-decoration: none;
+}
+
+#articlelink:link{
+    color: darkblue;
+    font-weight: bold;
+}
+
+#articlelink:visited {
+    color: darkblue;
+}
+
+#article-list{
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+
+.article-title{
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: lightgray;
+    color: darkblue;
+    width: 30em;
+    font-weight: bold;
+    text-shadow: .5px .5px ivory;
+}
+
+.article-title:hover{
+    background-color: darkblue;
+    color: lightgray;
+    text-shadow: .5px .5px black;
+}
+
+#articlesSource, #articlesTitle{
+    text-decoration: underline;
+}
+
+#login, #signup{
+    display: none;
+}
+
+label{
+    float: left;
+    display: block;
+    width: 10em;
+    padding-right: 2em;
+}
+
+input,textarea{
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+#lname,#fname,#lemail,#password{
+    display: block;
+}
+
+.createsigninbutton, .signinbutton{
+    color: darkblue;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: inherit;
+    font-size: 20px;
+    margin-top: inherit;
+    margin-bottom: 1em;
+}
+
+#mobile{display:none;}#desktop{display:inline;}
+
+@media only screen and (max-width: 1100px){
+    
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: none;
+    }
+    
+    .wrapper{
+        width: auto;
+        min-width: 0;
+        margin: 0;
+        box-shadow: none;
+    }
+    
+    h1{
+        margin: 0;
+    }
+    
+    nav{
+        float: none;
+        width: auto;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    
+    nav li{
+        display: inline-block;
+    }
+    
+    nav a{
+        padding-right: 2em;
+    }
+    
+    main{
+        padding: 1em;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 90%;
+        border-right-style: none;
+    }
+    
+    footer{
+        margin: 0;
+    }
+
+    .article-title{
+        width: auto;
+    }
+
+    .logoutbutton{
+        padding-bottom: 1em;
+    }
+}
+
+@media only all and (max-width: 768px){
+    
+    h1{
+        height: 100%;
+        font-size: 1.3em;
+        padding-left: .3em;
+        background-image: none;
+        margin-left: 6.5em;
+    }
+    
+    nav{
+        padding: 0;
+    }
+    
+    nav a{
+        display: block;
+        padding: .2em;
+        font-size: 1.1em;
+        border-bottom: 1px solid #FFFFFF;
+        border-bottom-color: #FFFFFF;
+    }
+    
+    nav ul{
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav li{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    
+    main{
+        padding-top: .1em;
+        padding-right: .6em;
+        padding-bottom: .1em;
+        padding-left: .4em;
+        margin-right: 0;
+    }
+
+    .article-title{
+        width: auto;
+    }
+    
+    #mobile{display: inline;}#desktop{display: none;}
+}
