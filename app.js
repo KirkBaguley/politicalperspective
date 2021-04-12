@@ -4,6 +4,12 @@ var Users = [];
 
 var articleList = document.querySelector("#article-list");
 
+var histButton = document.querySelector("#historybutton");
+
+var homeButton = document.querySelector("#homebutton");
+
+var settButton = document.querySelector("#settingsbutton");
+
 var libButton = document.querySelector("#liberalbutton");
 
 var indButton = document.querySelector("#independentbutton");
@@ -34,6 +40,18 @@ var signupPage = document.querySelector("#signup");
 
 var loginPage = document.querySelector("#login");
 
+histButton.onclick = function () {
+    window.alert("History functionality not yet implemented.");
+};
+
+settButton.onclick = function () {
+    window.alert("Settings functionality not yet implemented.");
+};
+
+homeButton.onclick = function () {
+    location.href = "index.html"
+};
+
 signupButton.onclick = function() {
     readingPage.style.display = "none";
     articleList.style.display = "none";
@@ -46,7 +64,7 @@ loginButton.onclick = function() {
     articleList.style.display = "none";
     loginPage.style.display = "block";
     signupPage.style.display = "none";
-}
+};
 
 signinButton.onclick = function() {
     var lemailTextField = document.querySelector("#lemail");
@@ -75,7 +93,7 @@ signinButton.onclick = function() {
             window.alert("Unexpected error logging in.");
         }
     });
-}
+};
 
 createsigninButton.onclick = function () {
     var snameTextField = document.querySelector("#sfname");
@@ -151,23 +169,23 @@ function loadArticlesFromServer() {
                     readingArticle.innerHTML = article.story1;
                     titleArticle.innerHTML = article.title1;
                     linkButton.href = article.url1;
-                    sourceArticle.innerHTML = article.source1;
+                    sourceArticle.innerHTML = "Source: " +article.source1;
                     libButton.onclick = function(){
                         if (article.source1 == "NBC") {
                             readingArticle.innerHTML = article.story1;
                             titleArticle.innerHTML = article.title1;
                             linkButton.href = article.url1;
-                            sourceArticle.innerHTML = article.source1;
+                            sourceArticle.innerHTML = "Source: " + article.source1;
                         } else if (article.source2 == "NBC") {
                             readingArticle.innerHTML = article.story2;
                             titleArticle.innerHTML = article.title2;
-                            sourceArticle.innerHTML = article.source2;
+                            sourceArticle.innerHTML = "Source: " +article.source2;
                             linkButton.href = article.url2;
                          } else if (article.source3 == "NBC") {
                              readingArticle.innerHTML = article.story3;
                              titleArticle.innerHTML = article.title3;
                              linkButton.href = article.url3;
-                             sourceArticle.innerHTML = article.source3;
+                             sourceArticle.innerHTML = "Source: " +article.source3;
                          } 
                     };
                     indButton.onclick = function(){
@@ -175,17 +193,17 @@ function loadArticlesFromServer() {
                             readingArticle.innerHTML = article.story1;
                             titleArticle.innerHTML = article.title1;
                             linkButton.href = article.url1;
-                            sourceArticle.innerHTML = article.source1;
+                            sourceArticle.innerHTML = "Source: " + article.source1;
                         } else if (article.source2 == "AP") {
                             readingArticle.innerHTML = article.story2;
                             titleArticle.innerHTML = article.title2;
                             linkButton.href = article.url2;
-                            sourceArticle.innerHTML = article.source2;
+                            sourceArticle.innerHTML = "Source: " + article.source2;
                         } else if (article.source3 == "AP") {
                             readingArticle.innerHTML = article.story3;
                             titleArticle.innerHTML = article.title3;
                             linkButton.href = article.url3;
-                            sourceArticle.innerHTML = article.source3;
+                            sourceArticle.innerHTML = "Source: " + article.source3;
                         } 
                     };
                     consButton.onclick = function(){
@@ -193,17 +211,17 @@ function loadArticlesFromServer() {
                             readingArticle.innerHTML = article.story1;
                             titleArticle.innerHTML = article.title1;
                             linkButton.href = article.url1;
-                            sourceArticle.innerHTML = article.source1;
+                            sourceArticle.innerHTML = "Source: " + article.source1;
                         } else if (article.source2 == "Fox") {
                             readingArticle.innerHTML = article.story2;
                             titleArticle.innerHTML = article.title2;
                             linkButton.href = article.url2;
-                            sourceArticle.innerHTML = article.source2;
+                            sourceArticle.innerHTML = "Source: " + article.source2;
                         } else if (article.source3 == "Fox") {
                             readingArticle.innerHTML = article.story3;
                             titleArticle.innerHTML = article.title3;
                             linkButton.href = article.url3;
-                            sourceArticle.innerHTML = article.source3;
+                            sourceArticle.innerHTML = "Source: " + article.source3;
                         }
                     };
                 };
@@ -212,6 +230,6 @@ function loadArticlesFromServer() {
             });
         });
     });
-}
+};
 
 loadArticlesFromServer();

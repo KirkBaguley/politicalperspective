@@ -103,7 +103,7 @@ class PerspectiveHTTPRequestHandler(BaseHTTPRequestHandler):
         user = db.getOneUser(email)
         if user != None:
             pdict = db.verifyUser(email)
-            test = pdict['lpassword']
+            test = pdict['password']
             if bcrypt.verify(password, test):
                 self.send_response(201)
                 self.sessionData["userId"] = user["id"]
