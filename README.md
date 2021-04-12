@@ -1,4 +1,5 @@
 # Political Perspective
+Political Perspective was designed to bring articles on similar topics from different viewpoints to the same place
 
 ## Resource
 
