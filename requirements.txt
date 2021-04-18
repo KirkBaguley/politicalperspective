@@ -26,7 +26,6 @@ pycurl==7.43.0
 pygobject==3.27.0
 PyJWT==1.3.0
 pyserial==3.0.1
-python-apt==1.1.0b1+ubuntu0.16.4.11
 python-debian==0.1.27
 python-systemd==231
 PyYAML==3.11
