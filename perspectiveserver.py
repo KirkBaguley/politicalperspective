@@ -1,3 +1,4 @@
+import os
 import json
 import threading
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -175,7 +176,7 @@ class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
     pass
 
 def run():
-    listen = ("127.0.0.1", 5000)
+    listen = ("0.0.0.0", 5000)
     server = ThreadedHTTPServer(listen, PerspectiveHTTPRequestHandler)
     print("Server is ready! Listening...")
     server.serve_forever()

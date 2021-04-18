@@ -1,1 +1,2 @@
-web: python perspectiveserver.py gunicorn home.html
+web: python perspectiveserver.py
+web: gunicorn index.php
