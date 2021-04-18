@@ -1,6 +1,7 @@
 import os
 import json
 import threading
+from flask import render_template
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from http import cookies
 from urllib.parse import parse_qs
@@ -148,7 +149,7 @@ class PerspectiveHTTPRequestHandler(BaseHTTPRequestHandler):
         self.loadSessionData()
         print("The PATH is:", self.path)
         if self.path == '/':
-            print(self.client_address)
+            return render_template("home.html")
         parts = self.path.split('/')
         collection = parts[1]
         article_id = None
