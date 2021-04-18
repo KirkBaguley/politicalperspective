@@ -149,9 +149,7 @@ class PerspectiveHTTPRequestHandler(BaseHTTPRequestHandler):
         print("The PATH is:", self.path)
 
         if self.path == '/':
-            HtmlFile = open("home.html", 'r', encoding='utf-8')
-            source_code = HtmlFile.read() 
-            print(source_code)
+            self.path = "home.html"
         parts = self.path.split('/')
         collection = parts[1]
         article_id = None
