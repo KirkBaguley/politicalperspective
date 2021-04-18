@@ -4,7 +4,7 @@ import psycopg2.extras
 class UserDB:
 
     def __init__(self):
-        self.connection = psycopg2.connect(database='perspective', user='kirk', password='kirk24', host='127.0.0.1', port='5432')
+        self.connection = psycopg2.connect(database='ddjhsokue67o70', user='svxpxvoanaufdc', password='ba4dfaaf6c380974d6f07dcdfed8fff747a023644e8cee42124244cc79b428f0', host='ec2-35-174-35-242.compute-1.amazonaws.com', port='5432')
         self.cursor = self.connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
     def insertUser(self, fname, lname, age, email, password):

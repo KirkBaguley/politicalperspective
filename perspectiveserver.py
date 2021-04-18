@@ -175,7 +175,7 @@ class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
     pass
 
 def run():
-    listen = ("127.0.0.1", 8080)
+    listen = ("127.0.0.1", 5000)
     server = ThreadedHTTPServer(listen, PerspectiveHTTPRequestHandler)
     print("Server is ready! Listening...")
     server.serve_forever()
