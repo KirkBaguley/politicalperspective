@@ -148,6 +148,8 @@ class PerspectiveHTTPRequestHandler(BaseHTTPRequestHandler):
         self.loadSessionData()
         print("The PATH is:", self.path)
 
+        if self.path == '/':
+            self.handleGetLikeArticles()
         parts = self.path.split('/')
         collection = parts[1]
         article_id = None
