@@ -77,7 +77,7 @@ signinButton.onclick = function() {
     lpasswordTextField.value = "";
     var data = "lemail=" + encodeURIComponent(lemail);
     data += "&lpassword=" + encodeURIComponent(lpassword);
-    fetch("http://localhost:8080/sessions", {
+    fetch("http://localhost:5000/sessions", {
         method: 'POST',
         credentials: 'include',
         body: data,
@@ -125,7 +125,7 @@ createsigninButton.onclick = function () {
         data += "&sage=" + encodeURIComponent(sage);
         data += "&semail=" + encodeURIComponent(semail);
         data += "&cspassword=" + encodeURIComponent(spassword);
-        fetch("http://localhost:8080/users", {
+        fetch("http://localhost:5000/users", {
             method: 'POST',
             credentials: 'include',
             body: data,
@@ -153,7 +153,7 @@ createsigninButton.onclick = function () {
 };
 
 function loadArticlesFromServer() {
-    fetch("http://localhost:8080/articles").then(function (response) {
+    fetch("http://localhost:5000/articles").then(function (response) {
         response.json().then(function (data) {
             ArticleList = data;
             articleList.innerHTML = "";
