@@ -49,7 +49,7 @@ settButton.onclick = function () {
 };
 
 homeButton.onclick = function () {
-    location.href = "index.html"
+    location.href = "home.html"
 };
 
 signupButton.onclick = function() {
