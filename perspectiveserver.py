@@ -147,9 +147,8 @@ class PerspectiveHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.loadSessionData()
         print("The PATH is:", self.path)
-
         if self.path == '/':
-            self.path = "home.html"
+            print(self.address_string())
         parts = self.path.split('/')
         collection = parts[1]
         article_id = None
