@@ -74,7 +74,7 @@ signinButton.onclick = function() {
     lpasswordTextField.value = "";
     var data = "lemail=" + encodeURIComponent(lemail);
     data += "&lpassword=" + encodeURIComponent(lpassword);
-    fetch("http://localhost:5000/sessions", {
+    fetch("http://0.0.0.0:5000/sessions", {
         method: 'POST',
         credentials: 'include',
         body: data,
@@ -150,7 +150,7 @@ createsigninButton.onclick = function () {
 };
 
 function loadArticlesFromServer() {
-    fetch("http://localhost:5000/articles").then(function (response) {
+    fetch("/articles").then(function (response) {
         response.json().then(function (data) {
             ArticleList = data;
             articleList.innerHTML = "";
