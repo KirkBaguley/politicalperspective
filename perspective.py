@@ -7,10 +7,11 @@ from datetime import timedelta
 
 app = Flask(__name__)
 app.secret_key = "MambaForever"
-app.permanent_session_lifetime = timedelta(minutes=0)
+app.permanent_session_lifetime = timedelta(minutes=5)
 
 @app.route("/", methods=["POST","GET"])
 def home():
+    session["button_id"] = 1
     db = ArticleDB()
     likeArticles = db.getAllLikeArticles()
     return render_template("index.html", articles = likeArticles)
@@ -31,9 +32,48 @@ def reading():
 @app.route("/prereading", methods=["POST","GET"])
 def prereading():
     if request.method == "POST":
-        if request.form.get("button_id") == "1":
-            session["button_id"] = 1
+        ids = request.form.get("article")
+        session["button_id"] = ids
         return redirect(url_for("reading"))
+
+@app.route("/prereading2", methods=["POST","GET"])
+def prereading2():
+    if request.method == "POST":
+        if request.form.get("perspectives") == "Liberal":
+            return redirect(url_for("liberal"))
+        elif request.form.get("perspectives") == "Independent":
+            return redirect(url_for("independent"))
+        elif request.form.get("perspectives") == "Conservative":
+            return redirect(url_for("conservative"))
+        else:
+            return redirect(url_for("reading"))
+
+@app.route("/liberal", methods=["POST","GET"])
+def liberal():
+    db = ArticleDB()
+    likeArticles = db.getAllLikeArticles()
+    i = session["button_id"]
+    i = int(i)
+    likeArticle = likeArticles[i-1]
+    return render_template("liberal.html", article = likeArticle )
+
+@app.route("/independent", methods=["POST","GET"])
+def independent():
+    db = ArticleDB()
+    likeArticles = db.getAllLikeArticles()
+    i = session["button_id"]
+    i = int(i)
+    likeArticle = likeArticles[i-1]
+    return render_template("independent.html", article = likeArticle )
+
+@app.route("/conservative", methods=["POST","GET"])
+def conservative():
+    db = ArticleDB()
+    likeArticles = db.getAllLikeArticles()
+    i = session["button_id"]
+    i = int(i)
+    likeArticle = likeArticles[i-1]
+    return render_template("conservative.html", article = likeArticle )
 
 @app.route("/login", methods=["POST","GET"])
 def login():
