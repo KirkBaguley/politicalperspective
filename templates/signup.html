@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor%}
+        {% endif %}
+    {% endwith %}
+<form action="/login" method="post">
+    <label for="sfname">First name:</label>
+    <input type="text" name="sfname">
+    <label for="slname">Last name:</label>
+    <input type="text" name="slname">
+    <label for="sage">Age: </label>
+    <input type="text" name="sage">
+    <label for="semail">Email:</label>
+    <input type="email" name="semail">
+    <label for="spassword">Password:</label>
+    <input type="password" name="spassword">
+    <label for="cspassword">Confirm Password:</label>
+    <input type="password" name="cspassword">
+    <button class="button createsigninbutton" id="createsigninbutton">Create Account</button>
+</form>
+{% endblock %}

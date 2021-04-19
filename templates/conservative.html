@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Choose a viewpoint</h2>
+<form method="POST", action="/prereading2">
+<button class="button liberalbutton" name="perspectives" id="liberalbutton" value="Liberal">Liberal</button>
+<button class="button independentbutton" name="perspectives" id="independentbutton" value="Independent">Independent</button>
+<button class="button conservativebutton" name="perspectives" id="conservativebutton" value="Conservative">Conservative</button> <br>
+</form>
+{% if article.source1 == "Fox" %}
+    <h2 id=articlesSource>{{article.title1}}</h2>
+    <h2 id=articlesTitle>{{article.source1}}</h2>
+    <a href="{{article.url1}}" id="articlelink">Link to Original Article</a>
+    <p id=articles>
+        {{article.story1}}
+    </p>
+{% elif article.source2 == "Fox" %}
+    <h2 id=articlesSource>{{article.title2}}</h2>
+    <h2 id=articlesTitle>{{article.source2}}</h2>
+    <a href="{{article.url2}}" id="articlelink">Link to Original Article</a>
+    <p id=articles>
+        {{article.story2}}
+    </p>
+{% else %}
+    <h2 id=articlesSource>{{article.title3}}</h2>
+    <h2 id=articlesTitle>{{article.source3}}</h2>
+    <a href="{{article.url3}}" id="articlelink">Link to Original Article</a>
+    <p id=articles>
+        {{article.story3}}
+    </p>
+{% endif %}
+{% endblock %}

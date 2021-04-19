@@ -53,10 +53,7 @@ homeButton.onclick = function () {
 };
 
 signupButton.onclick = function() {
-    readingPage.style.display = "none";
-    articleList.style.display = "none";
-    signupPage.style.display = "block";
-    loginPage.style.display = "none";
+    location.href = "signup.html"
 };
 
 loginButton.onclick = function() {
