@@ -314,6 +314,7 @@ input,textarea{
 
     .article-title{
         width: auto;
+        margin-left: 0;
     }
 
     .logoutbutton{
