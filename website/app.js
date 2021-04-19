@@ -153,7 +153,7 @@ createsigninButton.onclick = function () {
 };
 
 function loadArticlesFromServer() {
-    fetch("http://0.0.0.0:5000/articles").then(function (response) {
+    fetch("/articles").then(function (response) {
         response.json().then(function (data) {
             ArticleList = data;
             articleList.innerHTML = "";
