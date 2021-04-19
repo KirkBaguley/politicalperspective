@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <p>{{msg}}</p>
+        {% endfor%}
+    {% endif %}
+  {% endwith %}
+  <p>Perspective is designed to bring similar articles from different political perspectives into one place for an easy way to get different view points.</p>
+  <form action ="#" method="post">
+    <ul id="article-list">
+      {% for article in articles %}
+      <li><a href="/prereading"><button class="button article-title" name="button_id" id="button_id" value="{{loop.index}}">{{article.source1 + ":" + " " + " " + " " + article.title1}}</button></a></li>
+      {% endfor %}
+     </ul>
+  </form>
+{% endblock %}
