@@ -1,1 +1,1 @@
-web: python perspective.py
+web: gunicorn perspective:app
