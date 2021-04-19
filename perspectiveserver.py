@@ -175,7 +175,7 @@ class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
     pass
 
 def run():
-    port = int(os.environ.get("PORT",5000))
+    port = int(os.environ.get("PORT",6000))
     listen = ("0.0.0.0", port)
     server = ThreadedHTTPServer(listen, PerspectiveHTTPRequestHandler)
     print("Server is ready! Listening...")
