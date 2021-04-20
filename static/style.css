@@ -366,11 +366,13 @@ input,textarea{
     }
 
     #articleList{
-        margin: 0;
+        margin: 0
     }
 
     .article-title{
         width: auto;
+        margin-left: 1em;
+        margin-right: 1em;
     }
 
     .liberalbutton, .conservativebutton, .independentbutton {
