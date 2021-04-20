@@ -365,6 +365,12 @@ input,textarea{
     .article-title{
         width: auto;
     }
+
+    .liberalbutton, .conservativebutton, .independentbutton {
+        font-size: 10px;
+        width: 2em;
+        text-shadow: .5px .5px white;
+    }
     
     #mobile{display: inline;}#desktop{display: none;}
 }
