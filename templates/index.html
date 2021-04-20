@@ -11,7 +11,7 @@
   <form method="POST", action="/prereading">
     <ul id="article-list">
       {% for article in articles %}
-      <button class="button article-title" name="article" id="button_id" value="{{loop.index|string}}">{{article.source1 + ": " + " " + " " + " " + article.title1}}</button>
+      <button class="button article-title" name="article" id="button_id" value="{{loop.index|string}}">{{article.source1 + ": " + " " + " " + " " + " " + article.title1}}</button>
       {% endfor %}
      </ul>
   </form> 
