@@ -132,11 +132,6 @@ header,nav,main,footer{
     display: block;
 }
 
-main{
-    display: flex;
-    justify-content: center;
-}
-
 .liberalbutton, .conservativebutton, .independentbutton {
     color:black;
     border: none;
