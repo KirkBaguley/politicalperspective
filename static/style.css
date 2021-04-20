@@ -360,6 +360,7 @@ input,textarea{
         padding-bottom: .1em;
         padding-left: .4em;
         margin-right: 0;
+        margin-left: 0;
     }
 
     .article-title{
@@ -367,9 +368,10 @@ input,textarea{
     }
 
     .liberalbutton, .conservativebutton, .independentbutton {
-        font-size: 10px;
-        width: 2em;
+        font-size: 15px;
+        width: 8em;
         text-shadow: .5px .5px white;
+        display: inline-block;
     }
     
     #mobile{display: inline;}#desktop{display: none;}
