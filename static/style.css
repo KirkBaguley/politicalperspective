@@ -204,7 +204,6 @@ h1 a:visited{
 }
 
 #article-list{
-    width: 40em;
     list-style-type: none;
     padding-bottom: 20px;
     margin-left: auto;
@@ -369,12 +368,8 @@ input,textarea{
 
     .liberalbutton, .conservativebutton, .independentbutton {
         font-size: 15px;
-        width: 8em;
+        width: 9em;
         text-shadow: .5px .5px white;
+        display: inline-block;
     }    
-
-    .conservativebutton {
-        font-style: 14px;
-        width: 8.1em;
-    }
 }
