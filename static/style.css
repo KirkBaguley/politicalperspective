@@ -371,7 +371,9 @@ input,textarea{
         font-size: 15px;
         width: 8em;
         text-shadow: .5px .5px white;
+    }    
+
+    .conservativebutton {
+        font-style: 14px;
     }
-    
-    #mobile{display: inline;}#desktop{display: none;}
 }
