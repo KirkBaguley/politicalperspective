@@ -63,7 +63,6 @@ footer{
 
 footer a:link{
     color: darkblue;
-    text-decoration: none;
 }
 
 .wrapper {
@@ -317,6 +316,10 @@ input,textarea{
 
     .logoutbutton{
         padding-bottom: 1em;
+    }
+
+    #articleList{
+        margin-left: 0;
     }
 }
 
