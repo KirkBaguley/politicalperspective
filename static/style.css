@@ -371,7 +371,6 @@ input,textarea{
         font-size: 15px;
         width: 8em;
         text-shadow: .5px .5px white;
-        display: inline-block;
     }
     
     #mobile{display: inline;}#desktop{display: none;}
