@@ -1,5 +1,5 @@
 # Political Perspective
-Political Perspective is a web app designed to bring articles on similar topics from different viewpoints to the same place. It does so by scraping articles using a Python web scraper and storing them in a PostgreSQL database. The API uses a database query to compare article title similarity when selecting similar articles. The reading page allows for easy transitions between different article viewpoints.
+Political Perspective is a web app designed in Spring 2021, to bring articles on similar topics from different viewpoints to the same place. It does so by scraping articles using a Python web scraper and storing them in a PostgreSQL database. The API uses a database query to compare article title similarity when selecting similar articles. The reading page allows for easy transitions between different article viewpoints.
 
 ## Resource
 
